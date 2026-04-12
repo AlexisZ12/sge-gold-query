@@ -4,11 +4,17 @@
 
 一个简洁高效的命令行工具，用于查询上海黄金交易所（SGE）每日行情数据 ✨
 
-[![Python](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python&logoColor=white)](https://www.python.org/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![OpenClaw](https://img.shields.io/badge/OpenClaw-Skill-purple?logo=robot&logoColor=white)](SKILL.md)
 [![Copaw](https://img.shields.io/badge/Copaw-Skill-orange?logo=robot&logoColor=white)](SKILL.md)
 [![Claude Code](https://img.shields.io/badge/Claude_Code-Compatible-brightgreen?logo=anthropic&logoColor=white)](SKILL.md)
+[![Python](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python&logoColor=white)](https://www.python.org/)
+[![Requests](https://img.shields.io/badge/Requests-2.x-green)](https://docs.python-requests.org/)
+[![BeautifulSoup](https://img.shields.io/badge/BeautifulSoup-4.x-orange)](https://www.crummy.com/software/BeautifulSoup/)
+[![Pandas](https://img.shields.io/badge/Pandas-2.x-blue)](https://pandas.pydata.org/)
+[![BaoStock](https://img.shields.io/badge/BaoStock-1.x-teal)](https://www.baostock.com/)
+
+简体中文 | [**English**](README_EN.md)
 
 </div>
 
