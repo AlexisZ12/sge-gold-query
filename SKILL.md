@@ -17,7 +17,7 @@ pip install requests beautifulsoup4 python-dateutil baostock pandas
 ### Basic Syntax
 
 ```bash
-python sge_gold_query.py <mode> [--contract <contract_code>]
+python scripts/sge_gold_query.py <mode> [--contract <contract_code>]
 ```
 
 ### Modes (mutually exclusive)
@@ -61,23 +61,23 @@ python sge_gold_query.py <mode> [--contract <contract_code>]
 
 ```bash
 # Default contract (Au(T+D))
-python sge_gold_query.py --recent
+python scripts/sge_gold_query.py --recent
 
 # Specific contract
-python sge_gold_query.py --recent --contract "Ag(T+D)"
+python scripts/sge_gold_query.py --recent --contract "Ag(T+D)"
 ```
 
 ### Query historical data
 
 ```bash
 # 3 months ago
-python sge_gold_query.py --ago 3
+python scripts/sge_gold_query.py --ago 3
 
 # 6 months ago with specific contract
-python sge_gold_query.py --ago 6 --contract "Au99.99"
+python scripts/sge_gold_query.py --ago 6 --contract "Au99.99"
 
 # 12 months ago
-python sge_gold_query.py --ago 12 -c "mAu(T+D)"
+python scripts/sge_gold_query.py --ago 12 -c "mAu(T+D)"
 ```
 
 ## Output Format

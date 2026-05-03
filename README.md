@@ -41,13 +41,13 @@ pip install requests beautifulsoup4 python-dateutil baostock pandas
 
 ```bash
 # 查看帮助 👀
-python sge_gold_query.py --help
+python scripts/sge_gold_query.py --help
 
 # 查询最近一个月的数据 📈
-python sge_gold_query.py --recent
+python scripts/sge_gold_query.py --recent
 
 # 查询3个月前的数据 📉
-python sge_gold_query.py --ago 3
+python scripts/sge_gold_query.py --ago 3
 ```
 
 ---
@@ -66,16 +66,16 @@ python sge_gold_query.py --ago 3
 
 ```bash
 # 🥇 黄金延期交收（默认）
-python sge_gold_query.py --recent
+python scripts/sge_gold_query.py --recent
 
 # 🥈 白银延期交收
-python sge_gold_query.py --recent --contract "Ag(T+D)"
+python scripts/sge_gold_query.py --recent --contract "Ag(T+D)"
 
 # 🥇 查询6个月前的黄金数据
-python sge_gold_query.py --ago 6 --contract "Au99.99"
+python scripts/sge_gold_query.py --ago 6 --contract "Au99.99"
 
 # 📊 查询12个月前的迷你黄金
-python sge_gold_query.py --ago 12 -c "mAu(T+D)"
+python scripts/sge_gold_query.py --ago 12 -c "mAu(T+D)"
 ```
 
 ---

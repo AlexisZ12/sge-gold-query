@@ -41,13 +41,13 @@ pip install requests beautifulsoup4 python-dateutil baostock pandas
 
 ```bash
 # Show help 👀
-python sge_gold_query.py --help
+python scripts/sge_gold_query.py --help
 
 # Query recent month data 📈
-python sge_gold_query.py --recent
+python scripts/sge_gold_query.py --recent
 
 # Query data from 3 months ago 📉
-python sge_gold_query.py --ago 3
+python scripts/sge_gold_query.py --ago 3
 ```
 
 ---
@@ -66,16 +66,16 @@ python sge_gold_query.py --ago 3
 
 ```bash
 # 🥇 Gold deferred (default)
-python sge_gold_query.py --recent
+python scripts/sge_gold_query.py --recent
 
 # 🥈 Silver deferred
-python sge_gold_query.py --recent --contract "Ag(T+D)"
+python scripts/sge_gold_query.py --recent --contract "Ag(T+D)"
 
 # 🥇 Query gold data from 6 months ago
-python sge_gold_query.py --ago 6 --contract "Au99.99"
+python scripts/sge_gold_query.py --ago 6 --contract "Au99.99"
 
 # 📊 Query mini gold from 12 months ago
-python sge_gold_query.py --ago 12 -c "mAu(T+D)"
+python scripts/sge_gold_query.py --ago 12 -c "mAu(T+D)"
 ```
 
 ---

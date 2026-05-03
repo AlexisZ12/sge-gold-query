@@ -256,16 +256,16 @@ def parse_args():
         epilog="""
 使用示例:
   # 查询最近一个月的所有交易日数据（默认合约 Au(T+D)）
-  python sge_gold_query.py --recent
+  python scripts/sge_gold_query.py --recent
 
   # 查询3个月前最近一个交易日的数据
-  python sge_gold_query.py --ago 3
+  python scripts/sge_gold_query.py --ago 3
 
   # 查询最近一个月 Ag(T+D) 合约的数据
-  python sge_gold_query.py --recent --contract "Ag(T+D)"
+  python scripts/sge_gold_query.py --recent --contract "Ag(T+D)"
 
   # 查询6个月前 mAu(T+D) 合约的数据
-  python sge_gold_query.py --ago 6 --contract "mAu(T+D)"
+  python scripts/sge_gold_query.py --ago 6 --contract "mAu(T+D)"
         """
     )
 
