@@ -1,3 +1,8 @@
+---
+name: sge-gold-query
+description: Query daily quotation data from the Shanghai Gold Exchange (SGE) for gold, silver, and platinum contracts.
+---
+
 # SGE Gold Query Skill
 
 A command-line tool for querying daily quotation data from the Shanghai Gold Exchange (SGE).
@@ -127,20 +132,7 @@ Column headers (in Chinese):
 - 交收方向: Delivery direction
 - 交收量（手）: Delivery volume (lots)
 
-## Agent Usage Guidelines
-
-1. **Always specify a mode**: Either `--recent` or `--ago N` is required
-2. **Default contract**: If user doesn't specify a contract, use `Au(T+D)`
-3. **Error handling**: If the script returns an error, check network connectivity and retry
-4. **Rate limiting**: Avoid making rapid successive requests
-
 ## Data Sources
 
 - Quotation data: [Shanghai Gold Exchange](https://www.sge.com.cn/)
 - Trading calendar: BaoStock (A-share trading days)
-
-## Limitations
-
-- Trading calendar is based on A-share market, which may slightly differ from actual SGE trading days
-- Historical data availability depends on SGE website
-- Data is for reference only and should not be used as sole basis for investment decisions
