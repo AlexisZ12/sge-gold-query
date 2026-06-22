@@ -31,23 +31,52 @@ A clean and efficient CLI tool for querying daily market data from Shanghai Gold
 
 ## 🚀 Quick Start
 
-### 📦 Install Dependencies
+### 📦 Installation
 
 ```bash
+# 1. Install Python dependencies
 pip install requests beautifulsoup4 python-dateutil baostock pandas
+
+# 2. Install the skill to your platform
+
+# Claude Code
+cp -r skills/sge-gold-query ~/.claude/skills/sge-gold-query
+
+# OpenClaw
+cp -r skills/sge-gold-query ~/.openclaw/skills/sge-gold-query
+
+# QwenPaw
+cp -r skills/sge-gold-query ~/.copaw/skill_pool/sge-gold-query
 ```
+
+Once installed, invoke `/sge-gold-query` directly in your platform conversation.
 
 ### 🎮 Basic Usage
 
+**Method 1: Use as a platform skill (Recommended)**
+
+Use directly in your platform conversation:
+
+```
+/sge-gold-query --recent
+/sge-gold-query -a 3 -c "Ag(T+D)"
+/sge-gold-query --ago 6 --contract "Au99.99"
+```
+
+**Method 2: Run script directly (For testing/debugging)**
+
 ```bash
+# Navigate to the scripts directory
+cd skills/sge-gold-query/scripts
+
 # Show help 👀
-python scripts/sge_gold_query.py --help
+python sge_gold_query.py --help
 
 # Query recent month data 📈
-python scripts/sge_gold_query.py --recent
+python sge_gold_query.py --recent
 
 # Query data from 3 months ago 📉
-python scripts/sge_gold_query.py --ago 3
+python sge_gold_query.py --ago 3
 ```
 
 ---
@@ -66,16 +95,16 @@ python scripts/sge_gold_query.py --ago 3
 
 ```bash
 # 🥇 Gold deferred (default)
-python scripts/sge_gold_query.py --recent
+python sge_gold_query.py --recent
 
 # 🥈 Silver deferred
-python scripts/sge_gold_query.py --recent --contract "Ag(T+D)"
+python sge_gold_query.py --recent --contract "Ag(T+D)"
 
 # 🥇 Query gold data from 6 months ago
-python scripts/sge_gold_query.py --ago 6 --contract "Au99.99"
+python sge_gold_query.py --ago 6 --contract "Au99.99"
 
 # 📊 Query mini gold from 12 months ago
-python scripts/sge_gold_query.py --ago 12 -c "mAu(T+D)"
+python sge_gold_query.py --ago 12 -c "mAu(T+D)"
 ```
 
 ---

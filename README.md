@@ -31,23 +31,52 @@
 
 ## 🚀 快速开始
 
-### 📦 安装依赖
+### 📦 安装
 
 ```bash
+# 1. 安装 Python 依赖
 pip install requests beautifulsoup4 python-dateutil baostock pandas
+
+# 2. 将技能安装到对应平台
+
+# Claude Code
+cp -r skills/sge-gold-query ~/.claude/skills/sge-gold-query
+
+# OpenClaw
+cp -r skills/sge-gold-query ~/.openclaw/skills/sge-gold-query
+
+# QwenPaw
+cp -r skills/sge-gold-query ~/.copaw/skill_pool/sge-gold-query
 ```
+
+安装完成后，在对应平台对话中直接调用 `/sge-gold-query` 即可使用。
 
 ### 🎮 基本用法
 
+**方式一：安装为平台技能（推荐）**
+
+在对应平台对话中直接使用：
+
+```
+/sge-gold-query --recent
+/sge-gold-query -a 3 -c "Ag(T+D)"
+/sge-gold-query --ago 6 --contract "Au99.99"
+```
+
+**方式二：直接运行脚本（测试/调试用途）**
+
 ```bash
+# 进入脚本目录
+cd skills/sge-gold-query/scripts
+
 # 查看帮助 👀
-python scripts/sge_gold_query.py --help
+python sge_gold_query.py --help
 
 # 查询最近一个月的数据 📈
-python scripts/sge_gold_query.py --recent
+python sge_gold_query.py --recent
 
 # 查询3个月前的数据 📉
-python scripts/sge_gold_query.py --ago 3
+python sge_gold_query.py --ago 3
 ```
 
 ---
@@ -66,16 +95,16 @@ python scripts/sge_gold_query.py --ago 3
 
 ```bash
 # 🥇 黄金延期交收（默认）
-python scripts/sge_gold_query.py --recent
+python sge_gold_query.py --recent
 
 # 🥈 白银延期交收
-python scripts/sge_gold_query.py --recent --contract "Ag(T+D)"
+python sge_gold_query.py --recent --contract "Ag(T+D)"
 
 # 🥇 查询6个月前的黄金数据
-python scripts/sge_gold_query.py --ago 6 --contract "Au99.99"
+python sge_gold_query.py --ago 6 --contract "Au99.99"
 
 # 📊 查询12个月前的迷你黄金
-python scripts/sge_gold_query.py --ago 12 -c "mAu(T+D)"
+python sge_gold_query.py --ago 12 -c "mAu(T+D)"
 ```
 
 ---
